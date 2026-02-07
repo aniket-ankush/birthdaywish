@@ -2,25 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Birthday Wish</title>
+    <title>Birthday Poster Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home">
 
-<div class="container">
-    <div class="glass-card">
-        <h1>🎉 Birthday Wish 🎂</h1>
-        <p>Create a beautiful birthday message</p>
+<div class="input-panel">
+    <h1>Create Birthday Poster 🎂</h1>
 
-        <select id="gender">
-            <option value="boy">🎈 Birthday Boy</option>
-            <option value="girl">🎀 Birthday Girl</option>
-        </select>
+    <select id="gender">
+        <option value="boy">Birthday Boy</option>
+        <option value="girl">Birthday Girl</option>
+    </select>
 
-        <input type="text" id="name" placeholder="Enter name">
+    <input type="text" id="name" placeholder="Enter name">
 
-        <button onclick="generateWish()">Generate 🎁</button>
-    </div>
+    <button onclick="generateWish()">Generate Poster</button>
 </div>
 
 <script src="script.js"></script>
