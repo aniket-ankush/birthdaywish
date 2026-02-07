@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Happy Birthday</title>
+    <title>Birthday Poster</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="poster-page">
 
-<div class="container">
-    <div class="birthday-card" id="wishCard">
-        <h1>🎂 Happy Birthday 🎂</h1>
-        <h2 id="message"></h2>
-        <p>May your day be filled with love, laughter & cake 🎉</p>
+<div class="poster" id="wishCard">
+    <div class="blob pink"></div>
+    <div class="blob purple"></div>
+
+    <div class="poster-content">
+        <h2>HAPPY</h2>
+        <h1>BIRTHDAY</h1>
+        <h3 id="nameText"></h3>
+
+        <p id="lineText"></p>
     </div>
-
-    <button onclick="downloadWish()">Download 🎈</button>
 </div>
+
+<button class="download-btn" onclick="downloadWish()">Download Poster</button>
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="script.js"></script>
