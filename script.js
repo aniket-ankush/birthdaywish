@@ -3,7 +3,7 @@ function generateWish() {
     const gender = document.getElementById("gender").value;
 
     if (!name) {
-        alert("Please enter a name 🎯");
+        alert("Enter a name");
         return;
     }
 
@@ -11,22 +11,23 @@ function generateWish() {
 }
 
 if (location.pathname.includes("wish.html")) {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
     const name = params.get("name");
     const gender = params.get("gender");
 
-    const msg = gender === "boy"
-        ? `Dear ${name}, you’re an amazing Birthday Boy 🎉`
-        : `Dear ${name}, you’re a wonderful Birthday Girl 🎀`;
+    document.getElementById("nameText").innerText = name;
 
-    document.getElementById("message").innerText = msg;
+    document.getElementById("lineText").innerText =
+        gender === "boy"
+            ? "Wishing you success, happiness & endless smiles 🎉"
+            : "May your day be as beautiful as your smile ✨";
 }
 
 function downloadWish() {
     html2canvas(document.getElementById("wishCard")).then(canvas => {
         const link = document.createElement("a");
-        link.download = "Happy_Birthday.png";
+        link.download = "Birthday_Poster.png";
         link.href = canvas.toDataURL();
         link.click();
     });
-            }
+}
